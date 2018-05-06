@@ -12,20 +12,26 @@ public class User {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     @NotNull
     private int id;
+
+    @Basic
     @Column(name = "name")
     @NotNull
     private String name;
+
+    @Basic
     @Column(name = "age")
     private int age;
+
     @Column(name = "isAdmin")
     private boolean isAdmin;
+
     @Column(name = "createDate")
     @NotNull
     @DateTimeFormat(pattern = "MM/dd/yyyy")
-    private Timestamp timestamp;
+    private Timestamp createDate;
 
     public int getId() {
         return id;
@@ -56,11 +62,11 @@ public class User {
         isAdmin = admin;
     }
 
-    public Timestamp getTimestamp() {
-        return timestamp;
+    public Timestamp getCreateDate() {
+        return createDate;
     }
 
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = new Timestamp(System.currentTimeMillis());
+    public void setCreateDate(Timestamp createDate) {
+        this.createDate = new Timestamp(System.currentTimeMillis());
     }
 }
