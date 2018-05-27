@@ -3,7 +3,9 @@
   <component name="FacetManager">
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map />
+        <datasource-map>
+          <unit-entry name="sessionFactory" value="25f1f414-20a4-4788-a0dc-02975a21e134" />
+        </datasource-map>
         <naming-strategy-map />
       </configuration>
     </facet>

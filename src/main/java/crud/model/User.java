@@ -66,7 +66,7 @@ public class User {
         return createDate;
     }
 
-    public void setCreateDate(Timestamp createDate) {
+    public void setCreateDate() {
         this.createDate = new Timestamp(System.currentTimeMillis());
     }
 }

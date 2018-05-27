@@ -19,27 +19,37 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public void addUser(User user) {
-        Session session=sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         session.persist(user);
     }
 
     @Override
     public void removeUser(Integer id) {
-
+        Session session = sessionFactory.getCurrentSession();
+        User user = session.load(User.class, id);
+        session.delete(user);
     }
 
     @Override
     public User get(Integer id) {
-        return null;
+        Session session = sessionFactory.getCurrentSession();
+        return session.get(User.class, id);
     }
+
 
     @Override
     public List getUsers() {
-        return null;
+        Session session = sessionFactory.getCurrentSession();
+        return session.createQuery("from User").list();
     }
 
     @Override
     public void updateUser(User user) {
-
+        Session session = sessionFactory.getCurrentSession();
+        User savedUser = session.get(User.class, user.getId());
+        savedUser.setAdmin(user.isAdmin());
+        savedUser.setAge(user.getAge());
+        savedUser.setName(user.getName());
+        session.update(savedUser);
     }
 }
