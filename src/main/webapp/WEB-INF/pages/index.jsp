@@ -26,28 +26,26 @@
             <th>&nbsp;</th>
 
 
-
         </tr>
         <tbody>
         <c:forEach items="${users}" var="user">
             <tr>
-                <th><c:out value="${user.id}"></c:out></th>
-                <th><c:out value="${user.name}"></c:out></th>
-                <th><c:out value="${user.age}"></c:out></th>
-                <th><c:if test="${user.isAdmin!=false }">+</c:if>
-                <th><c:out value="${user.isAdmin}"></c:out></th>
-                    <th><c:out value="${user.createDate}"></c:out></th>
-                    <th></th>
+                <td><c:out value="${user.id}"></c:out></td>
+                <td><c:out value="${user.name}"></c:out></td>
+                <td><c:out value="${user.age}"></c:out></td>
+                <td>
+                    <c:if test="${user.isAdmin!=false }">+</c:if>
 
-
-
+                <td><c:out value="${user.createDate}"></c:out></td>
+                <td><a href="updateUser/${user.id}">Update</a></td>
+                <td><a href="deleteUser/${user.id}">Delete</a></td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
 
 </c:if>
-
+<a href="addUser">Add user</a>
 
 </body>
 </html>
