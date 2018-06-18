@@ -34,8 +34,7 @@
                 <td><c:out value="${user.name}"></c:out></td>
                 <td><c:out value="${user.age}"></c:out></td>
                 <td>
-                    <c:if test="${user.isAdmin!=false }">+</c:if>
-
+                    <c:if test="${user.admin!=false }">+</c:if>
                 <td><c:out value="${user.createDate}"></c:out></td>
                 <td><a href="updateUser/${user.id}">Update</a></td>
                 <td><a href="deleteUser/${user.id}">Delete</a></td>

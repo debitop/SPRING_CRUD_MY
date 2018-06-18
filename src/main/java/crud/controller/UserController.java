@@ -66,7 +66,7 @@ public class UserController {
         user.setAge(Integer.parseInt(age));
         user.setAdmin(isAdmin);
         repository.updateUser(user);
-        return "/redirect/";
+        return "redirect:/";
 }
 
 }

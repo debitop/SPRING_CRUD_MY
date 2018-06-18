@@ -5,7 +5,7 @@
   Time: 20:41
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
@@ -27,12 +27,8 @@
             <td>isAdmin</td>
             <td><input type="checkbox" name="isAdmin"</td>
         </tr>
-
-
+        <input type="submit" value="Save"/>
     </table>
-
-
 </form:form>
-
 </body>
 </html>

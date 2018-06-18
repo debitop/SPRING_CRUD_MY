@@ -26,8 +26,8 @@
             <td><form:input path="name"/></td>
         </tr>
         <tr>
-            <td><form:label path="name">Name:</form:label></td>
-            <td><form:input path="name"/></td>
+            <td><form:label path="age">Age:</form:label></td>
+            <td><form:input path="age"/></td>
         </tr>
         <tr>
             <td>Is admin? <form:checkbox path="admin"/></td>
